@@ -16,6 +16,10 @@ def get_coco_api_from_dataset(dataset):
 
 
 def build_dataset(image_set, args):
+    # ADDED THIS 
+    if args.dataset_file == 'cityscapes':
+        return build_coco(image_set, args)  
+    # ADDED THIS
     if args.dataset_file == 'coco':
         return build_coco(image_set, args)
     if args.dataset_file == 'coco_panoptic':
