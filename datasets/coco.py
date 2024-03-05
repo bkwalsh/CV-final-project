@@ -149,8 +149,8 @@ def build(image_set, args):
     mode = 'instancesonly'
     # changes down here too ^ above
     PATHS = {
-        "train": (root / "filtered_gtFine_train", root / "annotations" / f'{mode}_filtered_gtFine_train.json'),
-        "val": (root / "filtered_gtFine_val", root / "annotations" / f'{mode}_filtered_gtFine_val.json'),
+        "train": (root / "filtered_gtFine", root / "annotations" / f'{mode}_filtered_gtFine_train.json'),
+        "val": (root / "filtered_gtFine", root / "annotations" / f'{mode}_filtered_gtFine_val.json'),
     }
 
     img_folder, ann_file = PATHS[image_set]
